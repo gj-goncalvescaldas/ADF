@@ -6,7 +6,7 @@
    <img src="images/1.png" alt="Linked Service Creation" width="75%" />
 
 2. **Created a Dataset in Databricks**  
-   Referenced the compressed data in a `.gz` file. The relative URL is on my GitHub account.  
+   Referenced the compressed data in a `.gz` file. 
    <img src="images/2.png" alt="Dataset Creation" width="75%" />
 
 3. **Created a Second Linked Service to ADLS Gen2**  
