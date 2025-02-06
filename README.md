@@ -82,7 +82,7 @@ In this section, I performed transformations on cases_and_deaths.
    Pivoted the `indicator` column (which has values `confirmed_cases` and `deaths`) to create two new columns: `confirmed_cases_count` and `deaths_count`.  
 
 5. **Lookup**  
-   Joined the dataset with the `country_lookup` dataset to include both 2-digit and 3-digit country codes. The LookUp activiry works like a Join so after I need to remove duplicate columns and reorganized the data with a Select.  
+   Joined the dataset with the `country_lookup` dataset to include both 2-digit and 3-digit country codes. The LookUp activity works like a Join so after I need to remove duplicate columns and reorganized the data with a Select.  
 
 6. **Sink**  
    Published the transformed dataframe to the desired location using the sink dataset.  
