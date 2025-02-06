@@ -89,5 +89,5 @@ In this section, I performed transformations on cases_and_deaths.
 
 ### Execution
 - The debug mode in Data Flows provides a preview of the transformations but does not execute the data flow, so I created a pipeline to execute the data flow.  
-  <img src="images/14.png" alt="Pipeline Execution" width="75%" />
-  <img src="images/15.png" alt="Pipeline Execution" width="75%" />
+  <img src="images/14.png" alt="Pipeline Execution" width="100%" />
+  <img src="images/15.png" alt="Pipeline Execution" width="100%" />
