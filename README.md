@@ -1,5 +1,7 @@
 ## Data Factory Course
 
+ECDC COVID-19 data (cases, deaths, country responses, and hospital admissions)
+
 ### Data Ingestion from Azure Blob
 
 1. **Created a Linked Service**  
@@ -54,3 +56,38 @@
    <img src="images/9.png" alt="Pipeline Overview" width="75%" />  
    <img src="images/10.png" alt="ForEach Activity" width="75%" />  
    <img src="images/11.png" alt="Copy Data Activity" width="75%" />
+
+   ## Data Flows
+
+### Overview
+In this section, I performed transformations on cases_and_deaths.
+
+### Setup
+- Created a **source dataset** (`cases_and_deaths`) and a **sink dataset** for the transformed data.  
+- Included a **country_lookup dataset** to handle country codes (2-digit and 3-digit formats).  
+- Used a smaller sample dataset (`case_deaths_uk_ind_only`) with approximately 2000 records for debugging and previewing transformations.  
+  <img src="images/12.png" alt="Data Flow Debug Setup" width="75%" />
+
+### Data Flow Transformations
+1. **Preview of the Dataset**  
+   <img src="images/13.png" alt="Dataset Preview" width="75%" />
+
+2. **Filter**  
+   Filtered the `cases_and_deaths` dataset to include only European countries (e.g., removed India).  
+
+3. **Select and Rename**  
+   Dropped 2 columns and renamed the `date` column.  
+
+4. **Pivot**  
+   Pivoted the `indicator` column (which has values `confirmed_cases` and `deaths`) to create two new columns: `confirmed_cases_count` and `deaths_count`.  
+
+5. **Lookup**  
+   Joined the dataset with the `country_lookup` dataset to include both 2-digit and 3-digit country codes. The LookUp activiry works like a Join so after I need to remove duplicate columns and reorganized the data with a Select.  
+
+6. **Sink**  
+   Published the transformed dataframe to the desired location using the sink dataset.  
+
+### Execution
+- The debug mode in Data Flows provides a preview of the transformations but does not execute the data flow, so I created a pipeline to execute the data flow.  
+  <img src="images/14.png" alt="Pipeline Execution" width="75%" />
+  <img src="images/15.png" alt="Pipeline Execution" width="75%" />
