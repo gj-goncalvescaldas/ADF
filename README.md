@@ -11,8 +11,6 @@
 
 3. **Created a Second Linked Service to ADLS Gen2**  
    Created an empty sink dataset for the pipeline with the desired destination.  
-   <img src="images/1.png" alt="ADLS Gen2 Linked Service" width="75%" />  
-   <img src="images/2.png" alt="Sink Dataset Creation" width="75%" />
 
 4. **Built the Pipeline**  
    - Used a **Lookup Activity** to check if the first file exists.  
