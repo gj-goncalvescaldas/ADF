@@ -36,11 +36,11 @@
 2. **Created a Source Dataset**  
    Added a parameter for the relative URL to handle various datasets. The relative URL is on my GitHub account.  
    <img src="images/7.png" alt="Source Dataset Creation" width="75%" />  
-   <img src="images/8.png" alt="Source Dataset Parameter" width="75%" />
 
 3. **Created a Sink Dataset**  
    Added a parameter for the file name to handle various datasets.  
-
+   <img src="images/8.png" alt="Source Dataset Parameter" width="75%" />
+   
 4. **Uploaded a JSON File to Blob Storage**  
    The JSON file contained the relative URLs and file names for the datasets.  
    <img src="images/6.png" alt="JSON File Upload" width="75%" />
