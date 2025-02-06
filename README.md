@@ -23,7 +23,7 @@
 
 5. **Created a Trigger**  
    Associated the trigger with the pipeline. The trigger is always active and runs the pipeline when `population_by_age.tsv.gz` is uploaded to `bluetabsimplestorage/population/`.  
-   <img src="images/4.png" alt="Trigger Creation" width="75%" />
+   <img src="images/4.png" alt="Trigger Creation" width="50%" />
 
 ---
 
