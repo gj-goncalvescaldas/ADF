@@ -59,16 +59,16 @@ ECDC COVID-19 data (cases, deaths, country responses, and hospital admissions)
 
    ## Data Flows
 
-### Overview
+### Cases and Deaths Transformation
 In this section, I performed transformations on cases_and_deaths.
 
-### Setup
+#### Setup
 - Created a **source dataset** (`cases_and_deaths`) and a **sink dataset** for the transformed data.  
 - Included a **country_lookup dataset** to handle country codes (2-digit and 3-digit formats).  
 - Used a smaller sample dataset (`case_deaths_uk_ind_only`) with approximately 2000 records for debugging and previewing transformations.  
   <img src="images/12.png" alt="Data Flow Debug Setup" width="75%" />
 
-### Data Flow Transformations
+#### Data Flow Transformations
 1. **Preview of the Dataset**  
    <img src="images/13.png" alt="Dataset Preview" width="75%" />
 
@@ -87,7 +87,57 @@ In this section, I performed transformations on cases_and_deaths.
 6. **Sink**  
    Published the transformed dataframe to the desired location using the sink dataset.  
 
-### Execution
+#### Execution
 - The debug mode in Data Flows provides a preview of the transformations but does not execute the data flow, so I created a pipeline to execute the data flow.  
   <img src="images/14.png" alt="Pipeline Execution" width="100%" />
   <img src="images/15.png" alt="Pipeline Execution" width="100%" />
+  
+### Hospital Admissions Data Transformation
+
+#### Original File Structure
+The original file contains the following columns:
+- **country**: Name of the country.
+- **indicator**: Type of indicator (e.g., hospital occupancy, ICU occupancy).
+- **date**: Date of the report.
+- **year_week**: Year and week of the report (e.g., 2023-W10).
+- **value**: Numerical value of the indicator.
+- **source**: Source of the data.
+- **url**: URL reference for the data.
+
+<img src="images/16.png" alt="Original File Structure" width="100%" />
+
+---
+
+#### Target Daily File Structure
+The target daily file includes the following columns:
+- **country**: Name of the country.
+- **country_code_2_digit**: 2-digit country code.
+- **country_code_3_digit**: 3-digit country code.
+- **Population**: Population of the country.
+- **reported_date**: Date of the report.
+- **hospital_occupancy_count**: Number of hospital occupancies reported.
+- **icu_occupancy_count**: Number of ICU occupancies reported.
+- **source**: Source of the data.
+
+#### Target Weekly File Structure
+The target weekly file includes the following columns:
+- **country**: Name of the country.
+- **country_code_2_digit**: 2-digit country code.
+- **country_code_3_digit**: 3-digit country code.
+- **Population**: Population of the country.
+- **reported_year_week**: Year and week of the report (e.g., 2023-W10).
+- **reported_week_start_date**: Start date of the reported week.
+- **reported_week_end_date**: End date of the reported week.
+- **new_hospital_occupancy_count**: New hospital occupancies reported for the week.
+- **new_icu_occupancy_count**: New ICU occupancies reported for the week.
+- **source**: Source of the data.
+
+---
+
+#### Transformation Process
+To accomplish the desired structure, I used the following transformations:  
+**Select**, **LookUp**, **Conditional Split**, **Join**, **Pivot**, **Sort**, **DerivedColumn**, and **Aggregate**.
+
+<img src="images/17.png" alt="Data Flow Transformations" width="100%" />  
+<img src="images/18.png" alt="Data Flow Transformations" width="100%" />  
+<img src="images/19.png" alt="Data Flow Transformations" width="100%" />
