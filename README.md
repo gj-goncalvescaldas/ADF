@@ -157,7 +157,7 @@ Next, I needed to **mount** access to my storage containers. Instead of creating
 
 I did a transformation notebook in Databricks mostly in PySpark, which is available in my Databricks folder on this repository. The main objective is to run this notebook on DataFactory, so I created a linked service to my Databricks space and ran a pipeline for that notebook.  
 
-<img src="images/24.png" alt="Service Principal Access" width="30%" />
+<img src="images/24.png" alt="Service Principal Access" width="40%" />
 <img src="images/25.png" alt="Service Principal Access" width="75%" />
 
 **Data Source and Data Sink Below**  
@@ -168,5 +168,5 @@ I did a transformation notebook in Databricks mostly in PySpark, which is availa
 
 First, in my **bluetab-database**, I created the tables `cases_and_deaths` and `hospital_admissions_daily`. After that, I linked the new tables to the **Datasets** feature in Azure Data Factory (ADF) and copied my transformed dataframes to the database.  
 <img src="images/28.png" alt="Service Principal Access" width="75%" />
-<img src="images/29.png" alt="Service Principal Access" width="75%" />
+<img src="images/29.png" alt="Service Principal Access" width="40%" />
 <img src="images/30.png" alt="Service Principal Access" width="75%" />
