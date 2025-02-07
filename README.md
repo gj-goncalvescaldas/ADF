@@ -1,6 +1,19 @@
 ## Data Factory Course
 
-ECDC COVID-19 data (cases, deaths, country responses, and hospital admissions)
+### Project Overview
+
+This project demonstrates a comprehensive ETL (Extract, Transform, Load) workflow using **Azure Data Factory (ADF)**, **Databricks**, and **Power BI** to process and analyze COVID-19 data from the ECDC. It covers data ingestion from multiple sources, including **Azure Blob Storage** and **HTTP**, transformations using **Data Flows** and **Databricks**, and final data loading into **Azure SQL** for visualization. The project highlights key features such as pipeline orchestration, automated triggers, and data validation, providing a scalable solution for managing and analyzing large datasets. The end result is a fully integrated system that enables efficient data processing and insightful visualizations for decision-making.
+
+#### Key Services Used
+- **Azure Data Factory (ADF)**;
+- **Databricks**;
+- **Azure Blob Storage**;
+- **Azure Delta Lake**
+- **Azure SQL**;
+- **Power BI**;
+- **Azure Key Vault**;
+- **Service Principal**;
+- **HTTP**;
 
 ### Data Ingestion from Azure Blob
 
