@@ -151,17 +151,17 @@ As shown in the images below, I configured the scope and ensured secure access t
 
 Next, I needed to **mount** access to my storage containers. Instead of creating a new script, I reused an existing piece of code from a previous project stored in my **Databricks folder** on GitHub. This allowed me to efficiently set up the necessary connections without duplicating effort.
 
-<img src="images/21.png" alt="Key Vault Setup" width="100%" /> 
-<img src="images/22.png" alt="Databricks Scope Configuration" width="100%" /> 
-<img src="images/23.png" alt="Service Principal Access" width="100%" />
+<img src="images/21.png" alt="Key Vault Setup" width="75%" /> 
+<img src="images/22.png" alt="Databricks Scope Configuration" width="75%" /> 
+<img src="images/23.png" alt="Service Principal Access" width="75%" />
 
 I did a transformation notebook in Databricks mostly in PySpark, which is available in my Databricks folder on this repository. The main objective is to run this notebook on DataFactory, so I created a linked service to my Databricks space and ran a pipeline for that notebook.  
 
-<img src="images/24.png" alt="Service Principal Access" width="100%" />
-<img src="images/25.png" alt="Service Principal Access" width="100%" />
+<img src="images/24.png" alt="Service Principal Access" width="30%" />
+<img src="images/25.png" alt="Service Principal Access" width="75%" />
 
 **Data Source and Data Sink Below**  
-<img src="images/26.png" alt="Service Principal Access" width="100%" />
+<img src="images/26.png" alt="Service Principal Access" width="75%" />
 <img src="images/27.png" alt="Service Principal Access" width="100%" />
 
 
