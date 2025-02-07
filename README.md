@@ -181,4 +181,12 @@ In this section, I created a **Parent Pipeline** that orchestrates the entire wo
 The parent pipeline ensures that all tasks are executed in the correct order, maintaining dependency between the pipelines. Below is a visual representation of the parent pipeline, showcasing all the pipelines and datasets involved in the project. <img src="images/31.png" alt="Service Principal Access" width="100%" />
 
 ### Alternative Approach: Trigger Dependency  
-Instead of using a parent pipeline with explicit dependencies, I could have implemented **Trigger Dependency**. This approach would involve setting up triggers for each pipeline, ensuring that downstream pipelines only execute after their upstream dependencies are successfully completed. While this method can also achieve the desired workflow, I opted for the parent pipeline approach for better visibility and centralized control.  
+Instead of using a parent pipeline with explicit dependencies, I could have implemented **Trigger Dependency**. This approach would involve setting up triggers for each pipeline, ensuring that downstream pipelines only execute after their upstream dependencies are successfully completed. While this method can also achieve the desired workflow, I opted for the parent pipeline approach for better visibility and centralized control.
+
+## PowerBI Connection  
+
+I established a connection from **PowerBI Desktop** to our **Azure Database** to visualize the data. Using the `cases_and_deaths` table, a dashboard was created, and filters were applied to analyze the total cases and deaths specifically for **Portugal** and **Spain**.  
+
+To ensure data accuracy, I performed a validation check in **Databricks** by accessing the Delta Lake and comparing the data with the results in PowerBI. The data matched perfectly, confirming the integrity of our pipeline and transformations.  
+![PowerBI Dashboard](images/33.png)  
+![Databricks Data Validation](images/34.png)  
