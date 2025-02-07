@@ -187,6 +187,6 @@ Instead of using a parent pipeline with explicit dependencies, I could have impl
 
 I established a connection from **PowerBI Desktop** to our **Azure Database** to visualize the data. Using the `cases_and_deaths` table, a dashboard was created, and filters were applied to analyze the total cases and deaths specifically for **Portugal** and **Spain**.  
 
-To ensure data accuracy, I performed a validation check in **Databricks** by accessing the Delta Lake and comparing the data with the results in PowerBI. The data matched perfectly, confirming the integrity of our pipeline and transformations.  
-![PowerBI Dashboard](images/33.png)  
-![Databricks Data Validation](images/34.png)  
+To ensure data accuracy, I performed a validation check in **Databricks** by accessing the Delta Lake and comparing the data with the results in PowerBI. The data matched perfectly, confirming the integrity of our pipeline and transformations. <img src="images/32.png" alt="Service Principal Access" width="75%" />
+<img src="images/33.png" alt="Service Principal Access" width="100%" />
+<img src="images/34.png" alt="Service Principal Access" width="75%" />
