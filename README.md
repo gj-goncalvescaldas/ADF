@@ -170,3 +170,15 @@ First, in my **bluetab-database**, I created the tables `cases_and_deaths` and `
 <img src="images/28.png" alt="Service Principal Access" width="75%" />
 <img src="images/29.png" alt="Service Principal Access" width="40%" />
 <img src="images/30.png" alt="Service Principal Access" width="75%" />
+
+## Parent Pipeline  
+
+In this section, I created a **Parent Pipeline** that orchestrates the entire workflow. This pipeline includes:  
+- **2 Ingestion Pipelines** (for raw data ingestion)  
+- **3 Processed Pipelines** (for data transformation and processing)  
+- **1 Sqlize Pipeline** (for copying processed data to Azure SQL)  
+
+The parent pipeline ensures that all tasks are executed in the correct order, maintaining dependency between the pipelines. Below is a visual representation of the parent pipeline, showcasing all the pipelines and datasets involved in the project. <img src="images/31.png" alt="Service Principal Access" width="100%" />
+
+### Alternative Approach: Trigger Dependency  
+Instead of using a parent pipeline with explicit dependencies, I could have implemented **Trigger Dependency**. This approach would involve setting up triggers for each pipeline, ensuring that downstream pipelines only execute after their upstream dependencies are successfully completed. While this method can also achieve the desired workflow, I opted for the parent pipeline approach for better visibility and centralized control.  
