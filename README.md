@@ -162,7 +162,7 @@ I did a transformation notebook in Databricks mostly in PySpark, which is availa
 
 **Data Source and Data Sink Below**  
 <img src="images/26.png" alt="Service Principal Access" width="75%" />
-<img src="images/27.png" alt="Service Principal Access" width="75%" />
+<img src="images/27.png" alt="Service Principal Access" width="100%" />
 
 
       
