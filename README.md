@@ -164,5 +164,9 @@ I did a transformation notebook in Databricks mostly in PySpark, which is availa
 <img src="images/26.png" alt="Service Principal Access" width="75%" />
 <img src="images/27.png" alt="Service Principal Access" width="100%" />
 
+## Copy Data to Azure SQL  
 
-      
+First, in my **bluetab-database**, I created the tables `cases_and_deaths` and `hospital_admissions_daily`. After that, I linked the new tables to the **Datasets** feature in Azure Data Factory (ADF) and copied my transformed dataframes to the database.  
+<img src="images/28.png" alt="Service Principal Access" width="75%" />
+<img src="images/29.png" alt="Service Principal Access" width="75%" />
+<img src="images/30.png" alt="Service Principal Access" width="75%" />
