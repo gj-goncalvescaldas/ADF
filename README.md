@@ -1,6 +1,19 @@
 ## Data Factory Course
 
-ECDC COVID-19 data (cases, deaths, country responses, and hospital admissions)
+### Project Overview
+
+This project demonstrates a comprehensive ETL (Extract, Transform, Load) workflow using **Azure Data Factory (ADF)**, **Databricks**, and **Power BI** to process and analyze COVID-19 data from the ECDC. It covers data ingestion from multiple sources, including **Azure Blob Storage** and **HTTP**, transformations using **Data Flows** and **Databricks**, and final data loading into **Azure SQL** for visualization. The project highlights key features such as pipeline orchestration, automated triggers, and data validation, providing a scalable solution for managing and analyzing larger datasets. The end result is a fully integrated system that enables efficient data processing and insightful visualizations for decision-making.
+
+#### Key Services Used
+- **Azure Data Factory (ADF)**;
+- **Databricks**;
+- **Azure Blob Storage**;
+- **Azure Delta Lake**
+- **Azure SQL**;
+- **Power BI**;
+- **Azure Key Vault**;
+- **Service Principal**;
+- **HTTP**;
 
 ### Data Ingestion from Azure Blob
 
@@ -181,4 +194,12 @@ In this section, I created a **Parent Pipeline** that orchestrates the entire wo
 The parent pipeline ensures that all tasks are executed in the correct order, maintaining dependency between the pipelines. Below is a visual representation of the parent pipeline, showcasing all the pipelines and datasets involved in the project. <img src="images/31.png" alt="Service Principal Access" width="100%" />
 
 ### Alternative Approach: Trigger Dependency  
-Instead of using a parent pipeline with explicit dependencies, I could have implemented **Trigger Dependency**. This approach would involve setting up triggers for each pipeline, ensuring that downstream pipelines only execute after their upstream dependencies are successfully completed. While this method can also achieve the desired workflow, I opted for the parent pipeline approach for better visibility and centralized control.  
+Instead of using a parent pipeline with explicit dependencies, I could have implemented **Trigger Dependency**. This approach would involve setting up triggers for each pipeline, ensuring that downstream pipelines only execute after their upstream dependencies are successfully completed. While this method can also achieve the desired workflow, I opted for the parent pipeline approach for better visibility and centralized control.
+
+## PowerBI Connection  
+
+I established a connection from **PowerBI Desktop** to our **Azure Database** to visualize the data. Using the `cases_and_deaths` table, a dashboard was created, and filters were applied to analyze the total cases and deaths specifically for **Portugal** and **Spain**.  
+
+To ensure data accuracy, I performed a validation check in **Databricks** by accessing the Delta Lake and comparing the data with the results in PowerBI. The data matched perfectly, confirming the integrity of our pipeline and transformations. <img src="images/32.png" alt="Service Principal Access" width="75%" />
+<img src="images/33.png" alt="Service Principal Access" width="100%" />
+<img src="images/34.png" alt="Service Principal Access" width="75%" />
