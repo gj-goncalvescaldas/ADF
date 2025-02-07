@@ -141,3 +141,28 @@ To accomplish the desired structure, I used the following transformations:
 <img src="images/17.png" alt="Data Flow Transformations" width="100%" />  
 <img src="images/18.png" alt="Data Flow Transformations" width="100%" />  
 <img src="images/19.png" alt="Data Flow Transformations" width="100%" />
+
+## Databricks Activity  
+
+### **Set-up**  
+For this transformation, I utilized an existing Databricks Service within a Cluster that I had previously set up for another project. Since the data is stored in Delta Lake, I needed to grant Databricks access by creating a **Scope** for my service Key Vaults. These Vaults contain the secrets for my **bluetab-app** service principal, which has the necessary permissions to access the Delta Lake.  
+
+As shown in the images below, I configured the scope and ensured secure access to the storage. 
+
+Next, I needed to **mount** access to my storage containers. Instead of creating a new script, I reused an existing piece of code from a previous project stored in my **Databricks folder** on GitHub. This allowed me to efficiently set up the necessary connections without duplicating effort.
+
+<img src="images/21.png" alt="Key Vault Setup" width="100%" /> 
+<img src="images/22.png" alt="Databricks Scope Configuration" width="100%" /> 
+<img src="images/23.png" alt="Service Principal Access" width="100%" />
+
+I did a transformation notebook in Databricks mostly in PySpark, which is available in my Databricks folder on this repository. The main objective is to run this notebook on DataFactory, so I created a linked service to my Databricks space and ran a pipeline for that notebook.  
+
+<img src="images/24.png" alt="Service Principal Access" width="100%" />
+<img src="images/25.png" alt="Service Principal Access" width="100%" />
+
+**Data Source and Data Sink Below**  
+<img src="images/26.png" alt="Service Principal Access" width="100%" />
+<img src="images/27.png" alt="Service Principal Access" width="100%" />
+
+
+      
