@@ -1,6 +1,6 @@
 ## Data Factory
 
-### Another Project - Weather Project  
+### Weather Project  
 (Note: This is a separate project from the one described above.)
 
 I completed a small and simple project using **Delta Lake, Databricks, Azure SQL, and Power BI**.  
