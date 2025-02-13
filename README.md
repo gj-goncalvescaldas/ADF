@@ -10,8 +10,8 @@ The main objective of this project was to demonstrate real-time data flow, from 
 To fully automate the workflow, I configured **triggers in Data Factory** for scheduled refreshes and enabled automation in **Power BI** as well. Despite its simplicity, the project effectively illustrates the complete data pipeline—from fetching data via an **API**, ingesting it into **Delta Lake**, transforming it with **PySpark**, uploading it to **Databricks and Azure SQL**, and finally visualizing the new data in **Power BI**.  
 
 #### Links  
-- **[YouTube Video](https://www.youtube.com/watch?v=81x6F2FHyLI)**  
-- **[Project PDF](https://gj-goncalvescaldas.github.io/adf-weather.html)**  
+- <a href="https://www.youtube.com/watch?v=81x6F2FHyLI" target="_blank">**YouTube Video**</a>  
+- <a href="https://gj-goncalvescaldas.github.io/adf-weather.html" target="_blank">**Project PDF**</a>  
 
 ---
 
