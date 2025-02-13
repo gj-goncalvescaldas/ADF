@@ -203,3 +203,15 @@ I established a connection from **PowerBI Desktop** to our **Azure Database** to
 To ensure data accuracy, I performed a validation check in **Databricks** by accessing the Delta Lake and comparing the data with the results in PowerBI. The data matched perfectly, confirming the integrity of our pipeline and transformations. <img src="images/32.png" alt="Service Principal Access" width="75%" />
 <img src="images/33.png" alt="Service Principal Access" width="100%" />
 <img src="images/34.png" alt="Service Principal Access" width="75%" />
+
+## Weather Project  
+
+I completed a small and simple project using **Delta Lake, Databricks, Azure SQL, and Power BI**.  
+
+The main objective of this project was to demonstrate real-time data flow, from the API request to data visualization, by executing a single **Data Factory pipeline**. I created a **2-minute video** showcasing this process.  
+
+To fully automate the workflow, I configured **triggers in Data Factory** for scheduled refreshes and enabled automation in **Power BI** as well. Despite its simplicity, the project effectively illustrates the complete data pipeline—from fetching data via an **API**, ingesting it into **Delta Lake**, transforming it with **PySpark**, uploading it to **Databricks and Azure SQL**, and finally visualizing the new data in **Power BI**.  
+
+### Links:  
+- **[YouTube Video](https://www.youtube.com/watch?v=81x6F2FHyLI)**  
+- **[Project PDF](https://gj-goncalvescaldas.github.io/adf-weather.html)**  
