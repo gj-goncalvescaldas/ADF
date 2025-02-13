@@ -15,7 +15,7 @@ To fully automate the workflow, I configured **triggers in Data Factory** for sc
 
 ---
 
-### This Project Overview
+### Project Overview
 
 This project demonstrates a comprehensive ETL (Extract, Transform, Load) workflow using **Azure Data Factory (ADF)**, **Databricks**, and **Power BI** to process and analyze COVID-19 data from the ECDC. It covers data ingestion from multiple sources, including **Azure Blob Storage** and **HTTP**, transformations using **Data Flows** and **Databricks**, and final data loading into **Azure SQL** for visualization. The project highlights key features such as pipeline orchestration, automated triggers, and data validation, providing a scalable solution for managing and analyzing larger datasets. The end result is a fully integrated system that enables efficient data processing and insightful visualizations for decision-making.
 
